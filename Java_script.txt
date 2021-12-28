@@ -1,0 +1,54 @@
+import java.io.*;
+
+class Encapsulate {
+    private String VechicleName;
+    private String VechicleNumber;
+    private int VechicleAge;
+    public int getVechicleAge() { return VechicleAge; }
+    public String getVechicleName() { return VechicleName; }
+    public String getVechicleNumber() { return VechicleNumber; }
+    public void setVechicleAge(int newAge) { VechicleAge = newAge; }
+    public void setVechicleName(String newName){ VechicleName = newName; }
+    public void setVechicleNumber(String newNumber) { VechicleNumber = newNumber; }
+}
+abstract class Vechicle{
+  public abstract void VechicleType();
+  public void colour() {
+    System.out.println("Pink");
+  }
+}
+class Luxury extends Vechicle{
+  public void VechicleType() {
+    System.out.println("Luxury");
+  }
+}
+public class VechicleSum {
+    public int sum(int x, int y){ return (x + y); }
+    public int sum(int x, int y, int z){ return (x + y + z); }
+    public double sum(double x, double y){ return (x + y); }
+}
+interface welcome{
+Message say(String s);
+}
+class Message{
+Message(String msg){
+System.out.print(msg);}}
+class Main {
+  public static void main(String[] args) {
+    char[] array = new char[100];
+    welcome s1=Message::new;
+    s1.say("Vechicle Details:\n");
+    Luxury BMW = new Luxury();
+    Encapsulate Vechicle=new Encapsulate();
+    VechicleSum vs=new VechicleSum();
+    Vechicle.setVechicleName("BMW");
+    Vechicle.setVechicleAge(3);
+    Vechicle.setVechicleNumber("KA01MP1978");
+    System.out.println("Vechicle's name: " + Vechicle.getVechicleName());
+    System.out.println("Vechicle's age: " + Vechicle.getVechicleAge());
+    System.out.println("Vechicle's Number: " + Vechicle.getVechicleNumber());
+    System.out.println("Vechicle's Availability:" + vs.sum(3,2,4));
+    BMW.VechicleType();
+    BMW.colour();
+  }
+}
