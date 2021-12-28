@@ -1,0 +1,54 @@
+ vim gitCommand.git
+  978  vim gitCommand.txt
+  979  cat gitCommand.txt
+  980  git st
+  981  git diff
+  982  git diff>gitCommandbeforeAdd.patch
+  983  cat gitCommandbeforeAdd.patch
+  984  git add.
+  985  git add .
+  986  git reset gitCommandbeforeAdd.patch
+  987  git status
+  988  git st
+  989  git diff --cached
+  990  git diff
+  991  git st
+  992  git diff --cached > gitCommandafterAdd.patch
+  993  git diff --cached
+  994  git diff
+  995  git st
+  996  git commit
+  997  git commit -m "Changes in LinuxCommand and new file gitCommand" -m "LinuxCommand and gitCommand"
+  998  git log
+  999  git push origin wip-asu
+ 1000  now i can see changes in PR also mam
+ 1001  git commit --amend -m "Linux and Git file"
+ 1002  cd git 
+ 1003  cd Testing
+ 1004  cd testing
+ 1005  cd TrainingASU
+ 1006  git commit --amend -m "Linux and Git file"
+ 1007  git push origin wip-asu
+ 1008  git push -f origin wip-asu
+ 1009  git reset HEAD~1
+ 1010  git st
+git clone git@github.com:rch-axelor/TrainingASU.git
+ remote -v
+ git remote -v
+ cd TrainingASU
+ git remote -v
+ git remote set-url origin git@github.com:asu-axelor/TrainingASU.git
+ git remote -v
+ git remote add upstream git@github.com:rch-axelor/TrainingASU.git
+ git remote -v
+ git branch wip-asu
+ git checkout wip-asu
+ mkdir ASU
+ vim LinuxCommand.sh
+ git add LinuxCommand.sh
+ git add .
+ git status
+ git commit -m "This commit is for Linux commands"
+ git push origin wip-asu
+ vim LinuxCommand.sh
+ touch gitCommand.txt

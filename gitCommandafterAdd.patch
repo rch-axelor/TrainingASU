@@ -1,0 +1,39 @@
+diff --git a/LinuxCommand.sh b/LinuxCommand.sh
+index df3da99..72eafa4 100644
+--- a/LinuxCommand.sh
++++ b/LinuxCommand.sh
+@@ -1,3 +1,8 @@
++/*Create one script to achieve following requirement fetch all the files recursively from the specified directory Path in argument 
++check if the file is xml then copy it in directory named "xml" in current directory. 
++check if filename contains any special character rename it to only alphanumeric name (means remove all special character from fileName)
++check which file contains emailAddress and list out all those file names in file named "EmailAddressFiles.txt" and those emailAddress in file named "EmailAddresses.txt" in current directory. 
++& replace @gmail.com in all emailAddresses in all files with @axelor.com.*/
+ #!/bin/bash
+ read -p "Please Enter Path:" r1
+ for i in $(dir "$r1");do echo $i;done
+diff --git a/gitCommand.txt b/gitCommand.txt
+new file mode 100644
+index 0000000..c503a84
+--- /dev/null
++++ b/gitCommand.txt
+@@ -0,0 +1,20 @@
++ git clone git@github.com:rch-axelor/TrainingASU.git
++ remote -v
++ git remote -v
++ cd TrainingASU
++ git remote -v
++ git remote set-url origin git@github.com:asu-axelor/TrainingASU.git
++ git remote -v
++ git remote add upstream git@github.com:rch-axelor/TrainingASU.git
++ git remote -v
++ git branch wip-asu
++ git checkout wip-asu
++ mkdir ASU
++ vim LinuxCommand.sh
++ git add LinuxCommand.sh
++ git add .
++ git status
++ git commit -m "This commit is for Linux commands"
++ git push origin wip-asu
++ vim LinuxCommand.sh
++ touch gitCommand.txt
